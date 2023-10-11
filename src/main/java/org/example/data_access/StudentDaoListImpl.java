@@ -30,7 +30,7 @@ public class StudentDaoListImpl implements StudentDao{
         return this.students;
     }
     @Override
-    public void delete(int id) {
+    public Student delete(int id) {
         Student studenttodelete =find(id);
         if(studenttodelete!=null){
             students.remove(studenttodelete);
@@ -38,5 +38,6 @@ public class StudentDaoListImpl implements StudentDao{
             System.out.println("studenttodelete : " + studenttodelete);
         }
 
+        return studenttodelete;
     }
 }
