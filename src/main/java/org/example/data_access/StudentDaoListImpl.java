@@ -12,12 +12,12 @@ public class StudentDaoListImpl implements StudentDao{
     public StudentDaoListImpl(List<Student> students) {
         this.students = new ArrayList<>();
     }
-
+    @Override
     public Student save(Student student) {
         students.add( student);
         return student;
     }
-
+    @Override
     public Student find(int id) {
         return students
                 .stream()
@@ -25,11 +25,11 @@ public class StudentDaoListImpl implements StudentDao{
                 .findFirst()
                 .orElse(null);
     }
-
+    @Override
     public List<Student> findAll() {
         return this.students;
     }
-
+    @Override
     public void delete(int id) {
         Student studenttodelete =find(id);
         if(studenttodelete!=null){
