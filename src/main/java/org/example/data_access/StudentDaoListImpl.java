@@ -3,7 +3,9 @@ import org.example.models.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class StudentDaoListImpl implements StudentDao{
     List<Student> students;
 
